@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="row">
+		<app-imagen *ngFor="let imagen of imagenes | async " [imagen]="imagen" (click)="onSelect(imagen)" ></app-imagen>
+	</div>
+</div>
+
+
+<div class="w3-modal">
+  <div class="w3-modal-content">
+    <app-pedido-detail [imagenSeleccionada]="imagenSeleccionada"></app-pedido-detail>    
+  </div>
+</div>
